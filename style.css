@@ -1,0 +1,67 @@
+/* Landing Page CSS */
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Roboto';
+}
+
+button {
+	background-color: #3882F6;
+}
+
+
+/* header and logo text styling*/
+.header,
+.header > .logo {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+	font-size: 24px;
+}
+
+/* header link styling */
+.header > ul,
+.header > ul > li {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+	text-decoration: none;
+}
+
+/* header link text + hero secondary text styling */
+.header > ul > li,
+.hero-content > .container > p {
+	font-size: 18px;
+	color: #E5E7EB;
+}
+
+.hero {
+	font-size: 48px;
+	font-weight: extra-bold;
+	color: #F9FAF8;
+}
+
+.hero, .footer {
+	background-color: #1F2937;
+	color: #F9FAF8;
+}
+
+.hero-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+
+/* for testing hero images
+.hero-content > img {
+	width: 300px;
+	height: 100px;
+}
+*/
+
+.CallToAction {
+	background-color: #3882F6;
+}
