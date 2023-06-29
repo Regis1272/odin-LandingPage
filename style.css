@@ -10,29 +10,83 @@ root: {
 	--quote-bg-color: #E5E7EB;
 	--margins: 16px;
 	--extra-bold: 800;
+	--content-width: 900px;
 }
 
 body {
 	display: flex;
 	flex-direction: column;
 	font-family: 'Roboto';
-	text-align: center;
+	margin: 0;
 }
 
-button {
+/* Page-wide width + misc styling */
+.width-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	/* justify-items: center; */
+	align-items: center;
+	width: 70vw;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+/* Sign-Up button styling for hero */
+/* and call to action sections */
+.signUp {
+	width: 125px;
+	height: 40px;
 	background-color: #3882F6;
+	border: solid #3882F6;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 400;
+	color: white;
+}
+
+.cta-content > .signUp {
+	border: solid white;
 }
 
 
-/* header and logo text styling*/
-.header,
-.header > .logo {
+
+/* ---------- SECTION 1 ---------- */
+/* ---------- SECTION 1 ---------- */
+/* ---------- SECTION 1 ---------- */
+
+.hero {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	font-size: 48px;
+	color: #F9FAF8;
+	align-content: center;
+	justify-content: center;
+}
+
+.hero, .footer {
+	background-color: #1F2937;
+	color: #F9FAF8;
+}
+
+/* header and header logo text styling*/
+.header {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: center;
+	width: 60vw;
+}
+
+.header > .logo {
+	display: flex;
+	flex-wrap: wrap;
 	font-size: 24px;
 	font-weight: bold;
+	align-content: center;
 }
 
 /* header link styling */
@@ -51,36 +105,47 @@ button {
 	color: #E5E7EB;
 }
 
-.hero {
-	font-size: 48px;
-	font-weight: var(--extra-bold);
-	color: #F9FAF8;
-}
-
-.hero, .footer {
-	background-color: #1F2937;
-	color: #F9FAF8;
-}
-
 .hero-content {
 	display: flex;
 	justify-content: center;
 	align-content: center;
+	align-items: center;
+	gap: 50px;
 }
 
-/* for testing hero images
-.hero-content > img {
-	width: 300px;
-	height: 100px;
+.hero-content > .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 50px;
 }
-*/
 
-/* info section styling */
+.hero-content > .container > h1, p {
+	margin: 0;
+	padding: 0;
+}
+
+.hero-image-container {
+	width: 500px;
+	height: 250px;
+	overflow: hidden;
+}
+
+.hero-image-container img {
+	width: 200%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* ------- SECTION 2 ------- */
+/* ------- SECTION 2 ------- */
+/* ------- SECTION 2 ------- */
+
 .info-container {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between;
 	align-content: center;
 	margin: 100px;
 }
@@ -91,58 +156,105 @@ button {
 	font-weight: var(--extra-bold);
 	justify-content: center;
 	align-content: center;
+	margin-bottom: 60px;
 }
 
 .info-pics {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
 	justify-content: center;
-	align-content: center;
+	align-content: space-between;
+	gap: 50px;
 }
 
+/* Turns out I didn't need all this */
 .info {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
 }
 
 .info > .info-text {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
+	text-align: center;
 }
 
 .info > img {
-	display: flex;
-	flex-wrap: wrap;
+	border: solid;
+	border-color:#3882F6;
+	border-radius: 10px;
 	width: 150px;
+	height: 150px;
 }
-/* quote section styling */
+
+/* ---------- SECTION 3 ---------- */
+/* ---------- SECTION 3 ---------- */
+/* ---------- SECTION 3 ---------- */
+
 .quote {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
 	background-color: #E5E7EB;
+	padding: 100px;
+}
+
+.quote > .width-container > div {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: center;
+	align-items: flex-end;
+	gap: 16px;
 }
 
 .quote-text {
 	display: flex;
 	font-size: 36px;
 	font-style: italic;
+	font-weight: 10;
+	width: 50%;
 }
 
 .author {
-	display: flex;
-	justify-content: flex-end;
+	font-style: bold;
+	font-weight: 1200;
+	font-size: 20px;
+}
+/* ---------- SECTION 4 ---------- */
+/* ---------- SECTION 4 ---------- */
+/* ---------- SECTION 4 ---------- */
 
-/* call to action section styling */
-.CallToAction {
+.cta {
 	display: flex;
+	justify-content: center;
+	padding: 100px;
+}
+
+.cta-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 10px;
 	background-color: #3882F6;
+	color: white;
+	padding: 60px;
+	gap: 100px;
+}
+
+.cta-text {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.cta-text > h2,p {
+	margin: 0;
+}
+
+
+.footer {
+	display: flex;
+	justify-content: center;
+	padding: 50px;
+}
+
+.copyright > p {
+	font-size: 16px;
 }
